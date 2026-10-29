@@ -13,7 +13,7 @@ const StudentDashboard = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    let cancelled = false;
+    let cancelled = false; 
     enrollmentApi.getMyCourses()
       .then((list) => { if (!cancelled) setMyCourses(Array.isArray(list) ? list : []); })
       .catch((err) => { if (!cancelled) setError(err.message); })
